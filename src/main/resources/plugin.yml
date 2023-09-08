@@ -1,0 +1,7 @@
+name: ${pluginName}
+version: ${version}
+api-version: '${bukkitApiVersion}'
+main: ${pluginName}
+author: Icetang0123
+libraries:
+  - io.github.monun:kommand-core:${kommandVersion}
