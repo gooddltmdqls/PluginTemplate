@@ -1,7 +1,7 @@
 name: ${pluginName}
 version: ${version}
 api-version: '${bukkitApiVersion}'
-main: ${pluginName}
+main: 'xyz.icetang.lib.${pluginName}'
 author: Icetang0123
 libraries:
-  - io.github.monun:kommand-core:${kommandVersion}
+  - xyz.icetang.lib:kommand-core:${kommandVersion}

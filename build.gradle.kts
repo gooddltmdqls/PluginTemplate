@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import xyz.jpenilla.runpaper.task.RunServer
 
 plugins {
-    kotlin("jvm") version "1.9.0"
-    id("xyz.jpenilla.run-paper") version "2.1.0"
+    kotlin("jvm") version "1.9.22"
+    id("xyz.jpenilla.run-paper") version "2.2.2"
     application
 }
 
@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:${properties["paperApiVersion"]!!}-R0.1-SNAPSHOT")
-    implementation("io.github.monun:kommand-api:${properties["kommandVersion"]!!}")
+    implementation("xyz.icetang.lib:kommand-api:${properties["kommandVersion"]!!}")
 }
 
 tasks.withType<ProcessResources> {

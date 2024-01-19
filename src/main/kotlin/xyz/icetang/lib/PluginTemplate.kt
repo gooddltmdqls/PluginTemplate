@@ -1,4 +1,6 @@
-import io.github.monun.kommand.kommand
+package xyz.icetang.lib
+
+import xyz.icetang.lib.kommand.kommand
 import org.bukkit.plugin.java.JavaPlugin
 
 class PluginTemplate : JavaPlugin() {
