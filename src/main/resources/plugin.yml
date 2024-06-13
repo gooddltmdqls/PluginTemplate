@@ -4,4 +4,4 @@ api-version: '${bukkitApiVersion}'
 main: 'xyz.icetang.lib.${pluginName}'
 author: Icetang0123
 libraries:
-  - xyz.icetang.lib:kommand-core:${kommandVersion}
+  - xyz.icetang.lib:icemmand-core:${icemmandVersion}

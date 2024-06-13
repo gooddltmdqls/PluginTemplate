@@ -1,13 +1,13 @@
 package xyz.icetang.lib
 
-import xyz.icetang.lib.kommand.kommand
+import xyz.icetang.lib.icemmand.icemmand
 import org.bukkit.plugin.java.JavaPlugin
 
 class PluginTemplate : JavaPlugin() {
     override fun onEnable() {
         super.onEnable()
 
-        setupKommand()
+        setupCommands()
 
         logger.info("Enabled!")
     }
@@ -18,8 +18,8 @@ class PluginTemplate : JavaPlugin() {
         logger.info("Disabled!")
     }
 
-    private fun setupKommand() {
-        kommand {
+    private fun setupCommands() {
+        icemmand {
             register("example") {
                 executes {
                     sender.sendPlainMessage("Hello, World!")

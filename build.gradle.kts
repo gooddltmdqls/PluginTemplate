@@ -14,26 +14,26 @@ val pluginName = properties["pluginName"]!!
 
 repositories {
     mavenCentral()
-    maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
+    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:${properties["paperApiVersion"]!!}-R0.1-SNAPSHOT")
-    implementation("xyz.icetang.lib:kommand-api:${properties["kommandVersion"]!!}")
+    implementation("xyz.icetang.lib:icemmand-api:${properties["icemmandVersion"]!!}")
 }
 
 tasks.withType<ProcessResources> {
     inputs.property("version", version)
     inputs.property("pluginName", pluginName)
     inputs.property("bukkitApiVersion", properties["bukkitApiVersion"]!!)
-    inputs.property("kommandVersion", properties["kommandVersion"]!!)
+    inputs.property("icemmandVersion", properties["icemmandVersion"]!!)
 
     filesMatching("plugin.yml") {
         expand(mapOf(
             Pair("version", version),
             Pair("pluginName", pluginName),
             Pair("bukkitApiVersion", properties["bukkitApiVersion"]!!),
-            Pair("kommandVersion", properties["kommandVersion"]!!)
+            Pair("icemmandVersion", properties["icemmandVersion"]!!)
         ))
     }
 }
@@ -41,10 +41,10 @@ tasks.withType<ProcessResources> {
 tasks.withType<RunServer> {
     minecraftVersion(properties["paperApiVersion"]!! as String)
 
-    minHeapSize = "512M"
-    maxHeapSize = "2G"
+    minHeapSize = "1536M"
+    maxHeapSize = "1536M"
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17"
+    kotlinOptions.jvmTarget = "21"
 }
